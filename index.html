@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Surge Rules</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 15px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+         max-width: 40rem; margin: 4rem auto; padding: 0 1.25rem; }
+  h1 { font-size: 1.5rem; letter-spacing: -0.02em; }
+  h2 { font-size: 1.05rem; margin-top: 2rem; }
+  code { font: 13px/1.5 ui-monospace, "SF Mono", Menlo, monospace;
+         background: color-mix(in oklab, currentColor 8%, transparent);
+         padding: .15em .4em; border-radius: 4px; }
+  pre { background: color-mix(in oklab, currentColor 6%, transparent);
+        padding: 1rem; border-radius: 8px; overflow-x: auto; }
+  ul { padding-left: 1.2rem; }
+  a { color: #0a7cff; }
+  .muted { opacity: .6; font-size: .9em; }
+</style>
+<h1>Surge Rules</h1>
+<p class="muted">Clash → Surge 规则集，纯文本静态托管。</p>
+
+<h2>规则文件</h2>
+<ul>
+  <li><a href="/BankUS_Domain.list">BankUS_Domain.list</a> — 58 条，含通配域名（推荐）</li>
+  <li><a href="/BankUS.list">BankUS.list</a> — 45 条，DOMAIN-* 形式</li>
+  <li><a href="/BankUS_No_Resolve.list">BankUS_No_Resolve.list</a> — 45 条，与上一份相同</li>
+</ul>
+
+<h2>用法</h2>
+<pre><code>[Rule]
+RULE-SET,https://YOUR-DOMAIN/BankUS_Domain.list,US-Bank</code></pre>
+
+<p class="muted">上游源：
+<a href="https://github.com/Accademia/Additional_Rule_For_Clash/tree/main/Bank">Accademia/Additional_Rule_For_Clash</a></p>

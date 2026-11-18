@@ -1,0 +1,11 @@
+# Cloudflare Pages custom headers
+# 强制规则文件以纯文本返回，避免浏览器/Surge 猜类型
+/*.list
+  Content-Type: text/plain; charset=utf-8
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=300, must-revalidate
+
+# 让 *.pages.dev 不被搜索引擎收录
+/*
+  X-Robots-Tag: noindex
+  X-Content-Type-Options: nosniff
